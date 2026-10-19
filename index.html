@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>SCRR Electrical (Pty) Ltd | Precision Power Systems &amp; Modular Switchboards</title>
+  <meta name="description" content="SCRR Electrical (Pty) Ltd - South East Queensland's premier manufacturer of custom low-voltage switchboards, modular Elsteel systems, distribution boards, and Energex/Ergon meter panels. 100% Australian owned, AS/NZS 61439 compliant, NESMA member.">
+  <meta name="keywords" content="SCRR Electrical, switchboards, modular switchboards, Elsteel Techno Module, distribution boards, meter panels, outdoor switchboards, Energex approved, Ergon approved, AS61439, NESMA, Chevallum, Sunshine Coast">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" type="image/png" href="videos%20adn%20images/logo.png">
+
+  <!-- Core iOS Glassmorphism Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       SUBTLE ELECTRICAL SPARKS & ENERGY TRAILS CANVAS BACKGROUND
+       ========================================================================== -->
+  <canvas id="electricSparksCanvas"></canvas>
+
+  <!-- ==========================================================================
+       1. TRANSPARENT FLOATING iOS GLASS NAVIGATION HEADER
+       - 100% transparent with backdrop-filter: blur(12px)
+       - Crisp White (#FFFFFF) links turning Red (#E50914) on hover
+       - Logo image "videos adn images/logo.png" (NO black box surrounding it)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="header-container">
+        
+        <!-- Logo Brand: Direct logo.png with NO surrounding black box -->
+        <a href="#hero" class="logo-wrapper" aria-label="SCRR Electrical Home">
+          <img src="videos%20adn%20images/logo.png" alt="SCRR Electrical Pty Ltd Logo" class="logo-img">
+          <div class="logo-brand-info">
+            <span class="logo-brand-title">SCRR ELECTRICAL</span>
+            <span class="logo-brand-subtitle">PTY LTD &bull; QLD AUSTRALIA</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (White links turning Red on hover) -->
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About Us</a></li>
+            <li><a href="#offerings" class="nav-link">Core Offerings</a></li>
+            <li><a href="#tracker" class="nav-link">Job Tracker</a></li>
+            <li><a href="#gallery" class="nav-link">Workshop</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <a href="tel:+610753805400" class="phone-quick-pill" title="Call SCRR Electrical Office">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>(07) 5380 5400</span>
+          </a>
+          <a href="#tracker" class="btn btn-primary btn-sm">
+            <span>Track Job</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer & Overlay -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-menu-drawer" id="mobileDrawer">
+    <div>
+      <div style="margin-bottom: 28px; display: flex; align-items: center; gap: 12px;">
+        <img src="videos%20adn%20images/logo.png" alt="SCRR Logo" style="height: 38px; width: auto; object-fit: contain;">
+        <div>
+          <div style="font-weight: 800; font-size: 0.95rem; color: #ffffff;">SCRR ELECTRICAL</div>
+          <div style="font-size: 0.65rem; color: var(--brand-red); font-weight: 700; letter-spacing: 0.1em;">PTY LTD &bull; QLD AUSTRALIA</div>
+        </div>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+        <li><a href="#offerings" class="mobile-nav-link">Core Offerings</a></li>
+        <li><a href="#tracker" class="mobile-nav-link">Client Job Tracker</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Workshop &amp; Products</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact &amp; RFQ</a></li>
+      </ul>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a href="tel:+610753805400" class="btn btn-glass-pill" style="width: 100%;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call (07) 5380 5400
+      </a>
+      <a href="mailto:engineering@scrr.com.au" class="btn btn-primary" style="width: 100%;">Request Engineering Spec</a>
+    </div>
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         2. FULLSCREEN VIDEO HERO (CLEAR, UNOBSTRUCTED VIDEO & FLOATING GLASS PILLS)
+         - Zero heavy dark cards covering the background video
+         - 3D switchboard assembly animation plays smoothly in full view
+         ========================================================================== -->
+    <section class="hero-section snap-section" id="hero">
+      
+      <!-- Crystal-Clear 3D Looping Background Video (Unobstructed Fullscreen) -->
+      <div class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline poster="videos%20adn%20images/bc5f9cee-c7dc-4b3d-8c32-9e1578662f57.jpg" id="heroVideo">
+          <source src="videos%20adn%20images/hero-video.mp.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <div class="hero-ambient-vignette"></div>
+      </div>
+
+      <!-- Minimal, Floating Content Directly Over Video -->
+      <div class="container hero-content">
+        
+        <!-- Floating Subtle Brand Pill -->
+        <div class="hero-minimal-pill">
+          <span class="pill-dot"></span>
+          <span class="pill-text">SCRR ELECTRICAL &bull; MODULAR POWER SYSTEMS</span>
+        </div>
+
+        <!-- Clean Floating Typography Directly on Video -->
+        <h1 class="hero-headline">
+          PRECISION POWER SYSTEMS
+        </h1>
+        <p class="hero-subheadline">
+          Specialist low-voltage switchboards, modular power distribution, and bespoke engineering. 
+          Engineered in South East Queensland for commercial and industrial critical power.
+        </p>
+
+        <!-- Floating iOS Glass Pill Action Buttons -->
+        <div class="hero-floating-pills">
+          <a href="#tracker" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <span>Track Switchboard Job</span>
+          </a>
+          <a href="#offerings" class="btn btn-glass-pill">
+            <span>Explore Solutions</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+          </a>
+          <a href="tel:+610753805400" class="btn btn-glass-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>(07) 5380 5400</span>
+          </a>
+        </div>
+
+        <!-- Floating Bottom Feature Metrics Pills Bar -->
+        <div class="hero-metrics-bar">
+          <div class="metric-pill">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>60+ Years Combined Experience</span>
+          </div>
+          <div class="metric-pill">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>100% Australian Owned &amp; Built</span>
+          </div>
+          <div class="metric-pill">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>AS/NZS 61439 Certified</span>
+          </div>
+          <div class="metric-pill">
+            <span class="pill-dot" style="margin-right: 2px;"></span>
+            <span>NESMA Accredited Member</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. ABOUT US SECTION (SLEEK WHITE FROSTED GLASS CARDS)
+         ========================================================================== -->
+    <section class="section about-section snap-section" id="about">
+      <div class="container">
+        
+        <div class="glass-card about-master-card">
+          
+          <div class="section-header" style="margin-bottom: 40px;">
+            <div class="section-tag">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>Engineered in South East QLD</span>
+            </div>
+            <h2 class="section-title">
+              Craftsmanship Meets <span class="text-red">Precision Compliance</span>
+            </h2>
+            <p class="section-subtitle">
+              Established in 2020 on the Sunshine Coast, SCRR Electrical delivers tier-one switchgear assemblies, 
+              combining over six decades of master tradesmanship with modern modular engineering.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            
+            <!-- Left Narrative & Pillars -->
+            <div class="about-copy">
+              <p class="about-lead">
+                <strong>SCRR Electrical (Pty) Ltd</strong> was established in 2020 in South East Queensland to set a new benchmark 
+                in high-reliability switchboard fabrication and prompt client delivery.
+              </p>
+              <p class="about-text">
+                With over <strong>60 years of combined industry experience</strong> across electrical engineering, 
+                CNC metal fabrication, and copper busbar looming, our accredited team builds bespoke power distribution assemblies 
+                tailored to withstand Australia’s demanding climate and rigorous network standards.
+              </p>
+
+              <!-- 4 Feature Pillars Grid -->
+              <div class="about-pillars-grid">
+                <div class="pillar-box">
+                  <div class="pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <h3 class="pillar-title">AS/NZS 61439 Verified</h3>
+                  <p class="pillar-desc">Fully tested for temperature rise, dielectric withstand, and short circuit fault levels.</p>
+                </div>
+
+                <div class="pillar-box">
+                  <div class="pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                  </div>
+                  <h3 class="pillar-title">100% Australian Owned</h3>
+                  <p class="pillar-desc">Manufactured in Chevallum QLD, backing local jobs, apprenticeships, and industry supply chains.</p>
+                </div>
+
+                <div class="pillar-box">
+                  <div class="pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  </div>
+                  <h3 class="pillar-title">Rapid Job Turnaround</h3>
+                  <p class="pillar-desc">Integrated 3D CAD design and in-house manufacturing deliver accelerated project completion.</p>
+                </div>
+
+                <div class="pillar-box">
+                  <div class="pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                  </div>
+                  <h3 class="pillar-title">NESMA Member</h3>
+                  <p class="pillar-desc">Accredited member of the National Electrical Switchboard Manufacturers Association.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Visual Accreditation Box -->
+            <div class="about-visual-side">
+              <div class="about-feature-box">
+                <div class="feature-box-header">
+                  <div class="feature-emblem">
+                    <div class="emblem-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="emblem-titles">
+                      <h4>NESMA Accredited</h4>
+                      <p>National Switchboard Standard</p>
+                    </div>
+                  </div>
+                  <span class="section-tag" style="margin-bottom: 0;">Verified 2020–2026</span>
+                </div>
+
+                <ul class="checklist">
+                  <li class="check-item">
+                    <span class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                    <span><strong>60+ Years Combined Expertise:</strong> Master switchboard builders, electrical engineers, and CAD draughtsmen.</span>
+                  </li>
+                  <li class="check-item">
+                    <span class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                    <span><strong>Energex &amp; Ergon Approved:</strong> CT chambers built strictly to Queensland Electricity Connection Manual (QECM).</span>
+                  </li>
+                  <li class="check-item">
+                    <span class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                    <span><strong>Elsteel Techno Module:</strong> Verified modular architecture with internal segregation up to Form 4b.</span>
+                  </li>
+                  <li class="check-item">
+                    <span class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                    <span><strong>Live Production Visibility:</strong> Real-time production milestone tracking for contractors and consultants.</span>
+                  </li>
+                </ul>
+
+                <div class="location-pill-card" style="margin-top: 24px;">
+                  <div class="location-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  </div>
+                  <div class="location-text">
+                    <h5>Manufacturing Facility: Chevallum QLD</h5>
+                    <p>28 Kikuyu Road, Chevallum QLD 4555 &bull; Direct Bruce Highway logistics connectivity.</p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                  <a href="#offerings" class="btn btn-primary" style="flex: 1;">View Product Range</a>
+                  <a href="#contact" class="btn btn-glass-pill" style="flex: 1;">Facility Inquiry</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. CORE OFFERINGS / PRODUCTS GRID (FLOATING LIGHT GLASS CARDS)
+         ========================================================================== -->
+    <section class="section offerings-section snap-section" id="offerings">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Engineered Products</span>
+          </div>
+          <h2 class="section-title">
+            Core Offerings &amp; <span class="text-red">Product Range</span>
+          </h2>
+          <p class="section-subtitle">
+            Manufactured in our Sunshine Coast facility to exacting Australian standards. 
+            All assemblies undergo comprehensive factory acceptance testing (FAT) prior to site delivery.
+          </p>
+        </div>
+
+        <div class="offerings-grid">
+
+          <!-- 1. Distribution Boards -->
+          <div class="glass-card offering-card">
+            <div class="offering-top">
+              <div class="offering-header-row">
+                <span class="offering-badge badge-red">Up to 630A Rating</span>
+                <div class="offering-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </div>
+              </div>
+              <h3 class="offering-title">Distribution Boards</h3>
+              <p class="offering-lead">
+                Engineered for robust power reticulation across commercial, multi-residential, and industrial installations. 
+                Configured with precision copper chassis, high-capacity neutral links, and flexible breaker options.
+              </p>
+
+              <div class="specs-table">
+                <div class="spec-row">
+                  <span class="spec-key">Current Capacity</span>
+                  <span class="spec-val">Up to 630 Amperes</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Ingress Protection</span>
+                  <span class="spec-val">IP42, IP54, IP56, IP66</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Enclosure Material</span>
+                  <span class="spec-val">1.6mm – 2.0mm Zincanneal / 316 SS</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Chassis Types</span>
+                  <span class="spec-val">250A / 400A / 630A Encapsulated</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Cable Access</span>
+                  <span class="spec-val">Top &amp; Bottom Removable Gland Plates</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="offering-footer">
+              <div class="offering-compliance-tag">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>AS/NZS 61439.1 &amp; .2 Compliant</span>
+              </div>
+              <a href="#contact" class="btn btn-primary btn-sm" onclick="prefillProduct('Distribution Boards (up to 630A)')">Request Spec</a>
+            </div>
+          </div>
+
+          <!-- 2. Modular Switchboards (Elsteel) -->
+          <div class="glass-card offering-card">
+            <div class="offering-top">
+              <div class="offering-header-row">
+                <span class="offering-badge badge-blue">Elsteel Techno Module</span>
+                <div class="offering-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                </div>
+              </div>
+              <h3 class="offering-title">Modular Switchboards (Elsteel)</h3>
+              <p class="offering-lead">
+                Built utilizing the world-renowned Elsteel Techno Module modular switchboard system. 
+                Offers unmatched flexibility, arc-fault containment, and verified Form 1 to Form 4b internal segregation.
+              </p>
+
+              <div class="specs-table">
+                <div class="spec-row">
+                  <span class="spec-key">Current Rating</span>
+                  <span class="spec-val">Up to 7100A Main Busbar</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Short Circuit Level</span>
+                  <span class="spec-val">Up to 100kA for 1 second</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Forms of Separation</span>
+                  <span class="spec-val">Form 1, 2b, 3b, 4a, 4b (AS61439)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Architecture</span>
+                  <span class="spec-val">200mm Modular Grid Expandability</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Testing Regime</span>
+                  <span class="spec-val">DEKRA / KEMA Fully Type-Tested</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="offering-footer">
+              <div class="offering-compliance-tag">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>Type Tested to 7100A / 100kA</span>
+              </div>
+              <a href="#contact" class="btn btn-primary btn-sm" onclick="prefillProduct('Modular Switchboards (Elsteel)')">Request Spec</a>
+            </div>
+          </div>
+
+          <!-- 3. Outdoor Enclosures -->
+          <div class="glass-card offering-card">
+            <div class="offering-top">
+              <div class="offering-header-row">
+                <span class="offering-badge badge-amber">IP56–IP66 Weatherproof</span>
+                <div class="offering-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 116.71-9h1.79a4.5 4.5 0 110 9z"/></svg>
+                </div>
+              </div>
+              <h3 class="offering-title">Outdoor Enclosures &amp; Boards</h3>
+              <p class="offering-lead">
+                Built specifically to withstand Queensland's intense UV radiation, torrential downpours, and coastal salt spray. 
+                Engineered with solar shields, thermal venting, and marine-grade materials.
+              </p>
+
+              <div class="specs-table">
+                <div class="spec-row">
+                  <span class="spec-key">Enclosure Choices</span>
+                  <span class="spec-val">316 Marine SS / 3mm Alum / Mild Steel</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Ingress Protection</span>
+                  <span class="spec-val">IP56, IP65, IP66 Verified</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Thermal Mitigation</span>
+                  <span class="spec-val">Sun Shields &amp; Anti-Condensation Heaters</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Hardware &amp; Latching</span>
+                  <span class="spec-val">3-Point Padlockable Swing Handles</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Plinth Mountings</span>
+                  <span class="spec-val">Hot-Dip Galvanized / SS Channel Bases</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="offering-footer">
+              <div class="offering-compliance-tag">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>UV-Resistant &amp; Cyclone Rated</span>
+              </div>
+              <a href="#contact" class="btn btn-primary btn-sm" onclick="prefillProduct('Outdoor Switchboards (Weatherproof)')">Request Spec</a>
+            </div>
+          </div>
+
+          <!-- 4. Meter Panels (Energex / Ergon Approved) -->
+          <div class="glass-card offering-card">
+            <div class="offering-top">
+              <div class="offering-header-row">
+                <span class="offering-badge badge-green">Energex &amp; Ergon Approved</span>
+                <div class="offering-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg>
+                </div>
+              </div>
+              <h3 class="offering-title">Meter Panels &amp; CT Chambers</h3>
+              <p class="offering-lead">
+                Fully compliant with the Queensland Electricity Connection Manual (QECM). Custom-tailored CT chambers, 
+                group metering suites, and combined service protection devices for Energex &amp; Ergon network zones.
+              </p>
+
+              <div class="specs-table">
+                <div class="spec-row">
+                  <span class="spec-key">Authority Approval</span>
+                  <span class="spec-val">Energex &amp; Ergon Energy (QECM)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Metering Types</span>
+                  <span class="spec-val">Direct Connected &amp; CT Metering (100A–2000A)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Isolation &amp; Links</span>
+                  <span class="spec-val">Sealable Test Blocks &amp; Neutral Disconnects</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Viewing Windows</span>
+                  <span class="spec-val">High-Impact UV-Stabilized Polycarbonate</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Tenancy Suites</span>
+                  <span class="spec-val">Multi-occupancy Modular Arrays</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="offering-footer">
+              <div class="offering-compliance-tag">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>QECM Authority Verified</span>
+              </div>
+              <a href="#contact" class="btn btn-primary btn-sm" onclick="prefillProduct('Meter Panels & CT Chambers (Energex/Ergon)')">Request Spec</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. INTERACTIVE CLIENT JOB TRACKER (SEARCH & LIVE STATUS UPDATES)
+         ========================================================================== -->
+    <section class="section tracker-section snap-section" id="tracker">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Live Order Tracking</span>
+          </div>
+          <h2 class="section-title">
+            Interactive <span class="text-red">Job Status Search</span>
+          </h2>
+          <p class="section-subtitle">
+            Enter your SCRR Production Job ID to check real-time fabrication stages, factory testing progress, 
+            and confirmed dispatch ETAs.
+          </p>
+        </div>
+
+        <div class="tracker-card">
+          
+          <!-- Minimalist Search Input Pill -->
+          <form id="trackerForm" onsubmit="handleJobSearch(event)">
+            <div class="tracker-search-box">
+              <div class="search-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <input type="text" id="jobSearchInput" class="tracker-input" placeholder="Enter Job ID (e.g. S2670)..." value="S2670" autocomplete="off" spellcheck="false" required>
+              <button type="submit" class="btn btn-primary btn-sm">
+                <span>Check Status</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </form>
+
+          <!-- Quick Test Job Chips -->
+          <div class="quick-demos-bar">
+            <span class="quick-demo-label">Quick Test Jobs:</span>
+            <button class="demo-chip" onclick="loadJobId('S2670')">S2670 (Main Switchboard)</button>
+            <button class="demo-chip" onclick="loadJobId('S2540')">S2540 (Outdoor SS Board)</button>
+            <button class="demo-chip" onclick="loadJobId('S2710')">S2710 (Energex CT Chamber)</button>
+            <button class="demo-chip" onclick="loadJobId('S2895')">S2895 (Dist. Boards x4)</button>
+          </div>
+
+          <!-- Dynamic Results Container -->
+          <div id="trackerResult" class="tracker-result-display">
+            <!-- Dynamically populated via JavaScript -->
+          </div>
+
+          <!-- Direct Data Team CTA Bar -->
+          <div class="tracker-cta-bar">
+            <div class="tracker-cta-info">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div class="tracker-cta-text">
+                <h4>Have a custom query regarding your fabrication schedule?</h4>
+                <p>Our production scheduling department is directly accessible via <strong style="color: var(--text-primary);">data@scrr.com.au</strong></p>
+              </div>
+            </div>
+            <a id="trackerEmailBtn" href="mailto:data@scrr.com.au?subject=Inquiry%20regarding%20Job%20S2670" class="btn btn-primary btn-sm">
+              <span>Email Production Team</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. WORKSHOP & PRODUCTS GALLERY (iOS BLUR & ZOOM HOVER EFFECTS)
+         ========================================================================== -->
+    <section class="section gallery-section snap-section" id="gallery">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Sunshine Coast Facility</span>
+          </div>
+          <h2 class="section-title">
+            Workshop &amp; <span class="text-red">Manufacturing Gallery</span>
+          </h2>
+          <p class="section-subtitle">
+            Take a look inside our Chevallum workshop where precision busbar bending, modular frame construction, 
+            and meticulous loom wiring come together under AS/NZS 61439 standards.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <!-- Gallery Item 1: 1.mp.jpg -->
+          <div class="gallery-card" onclick="openLightbox('videos%20adn%20images/1.mp.jpg', 'Precision Switchboard Assembly &amp; Internal Busbar Architecture - Chevallum Facility')">
+            <div class="gallery-image-frame">
+              <img src="videos%20adn%20images/1.mp.jpg" alt="SCRR Electrical Switchboard Workshop Assembly" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <div class="gallery-tag-row">
+                    <span class="gallery-badge badge-accent">Workshop Build</span>
+                    <span class="gallery-badge">Form 3b Segregation</span>
+                  </div>
+                  <h3 class="gallery-title">High-Capacity Switchboard Assembly</h3>
+                  <p class="gallery-desc">Meticulously routed secondary wiring harnesses, modular framework alignment, and calibrated copper busbar torque inspections.</p>
+                  <div class="gallery-inspect-btn">
+                    <span>Inspect High-Res View</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2: bc5f9cee-c7dc-4b3d-8c32-9e1578662f57.jpg -->
+          <div class="gallery-card" onclick="openLightbox('videos%20adn%20images/bc5f9cee-c7dc-4b3d-8c32-9e1578662f57.jpg', 'Custom Power Distribution Enclosure Construction &amp; FAT Staging')">
+            <div class="gallery-image-frame">
+              <img src="videos%20adn%20images/bc5f9cee-c7dc-4b3d-8c32-9e1578662f57.jpg" alt="Custom Power Distribution Assembly Staging" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <div class="gallery-tag-row">
+                    <span class="gallery-badge badge-accent">Testing &amp; QA</span>
+                    <span class="gallery-badge">AS/NZS 61439 Verified</span>
+                  </div>
+                  <h3 class="gallery-title">Precision Power Distribution Systems</h3>
+                  <p class="gallery-desc">Factory acceptance testing stage featuring certified switchgear integration, thermal imaging verification, and dielectric insulation resistance tests.</p>
+                  <div class="gallery-inspect-btn">
+                    <span>Inspect High-Res View</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox Modal (Clean iOS Light Glass) -->
+    <div class="lightbox-modal" id="galleryLightbox" onclick="closeLightbox(event)">
+      <div class="lightbox-inner">
+        <button class="lightbox-close-btn" onclick="closeLightboxDirect()" aria-label="Close image preview">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <img src="" alt="Full view preview" class="lightbox-image" id="lightboxImg">
+        <p class="lightbox-caption" id="lightboxCap"></p>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         7. CONTACT FOOTER & REQUEST FOR QUOTE
+         ========================================================================== -->
+    <section class="section contact-section snap-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>Get in Touch</span>
+          </div>
+          <h2 class="section-title">
+            Connect with <span class="text-red">SCRR Electrical</span>
+          </h2>
+          <p class="section-subtitle">
+            Whether you require a formal tender bid, custom switchboard engineering spec, 
+            or an update on current production runs, our team is ready to assist.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Direct Contact Information Card -->
+          <div class="glass-card contact-info-card">
+            <div class="contact-info-header">
+              <h3>Headquarters &amp; Plant</h3>
+              <p>Strategically located in Chevallum, QLD with immediate Bruce Highway logistics connectivity for rapid site deliveries.</p>
+            </div>
+
+            <div class="contact-details-list">
+              
+              <!-- Address -->
+              <a href="https://maps.google.com/?q=28+Kikuyu+Road,+Chevallum+QLD+4555" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <div class="channel-text">
+                  <span class="channel-title">Physical Address</span>
+                  <div class="channel-value">28 Kikuyu Road, Chevallum QLD 4555</div>
+                  <span class="channel-desc">South East Queensland, Australia &bull; Open in Maps &rarr;</span>
+                </div>
+              </a>
+
+              <!-- Phone -->
+              <a href="tel:+610753805400" class="contact-channel-item">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <div class="channel-text">
+                  <span class="channel-title">Direct Office Telephone</span>
+                  <div class="channel-value">+61 07 5380 5400</div>
+                  <span class="channel-desc">Monday – Friday: 6:30 AM – 4:30 PM AEST</span>
+                </div>
+              </a>
+
+            </div>
+
+            <!-- Dedicated Departmental Email Directory -->
+            <div class="email-directory-panel">
+              <span class="email-directory-title">Dedicated Department Contacts:</span>
+              <div class="email-pill-row">
+                <a href="mailto:admin@scrr.com.au" class="email-pill">
+                  <span class="email-pill-dep">Administration</span>
+                  <span class="email-pill-addr">admin@scrr.com.au</span>
+                </a>
+                <a href="mailto:data@scrr.com.au" class="email-pill">
+                  <span class="email-pill-dep">Job Tracking</span>
+                  <span class="email-pill-addr">data@scrr.com.au</span>
+                </a>
+                <a href="mailto:engineering@scrr.com.au" class="email-pill">
+                  <span class="email-pill-dep">Engineering &amp; Quotes</span>
+                  <span class="email-pill-addr">engineering@scrr.com.au</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Quick Quote & Spec Request Form -->
+          <div class="glass-card contact-form-card">
+            <div class="form-header">
+              <h3>Request Technical Quotation</h3>
+              <p>Submit your project requirements, single line diagrams (SLD), or tender specifications directly to our engineering division.</p>
+            </div>
+
+            <form class="rfq-form" id="rfqForm" onsubmit="handleQuoteSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="rfqName" class="form-label">Full Name *</label>
+                  <input type="text" id="rfqName" class="form-input" placeholder="e.g. David Clarke" required>
+                </div>
+                <div class="form-group">
+                  <label for="rfqCompany" class="form-label">Company / Contractor *</label>
+                  <input type="text" id="rfqCompany" class="form-input" placeholder="e.g. Apex Electrical Group" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="rfqEmail" class="form-label">Email Address *</label>
+                  <input type="email" id="rfqEmail" class="form-input" placeholder="david@contractor.com.au" required>
+                </div>
+                <div class="form-group">
+                  <label for="rfqPhone" class="form-label">Contact Phone</label>
+                  <input type="tel" id="rfqPhone" class="form-input" placeholder="0400 123 456">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="rfqProduct" class="form-label">Product / Assembly Type</label>
+                <select id="rfqProduct" class="form-select">
+                  <option value="Distribution Boards (up to 630A)">Distribution Board (up to 630A, IP42–IP66)</option>
+                  <option value="Modular Switchboards (Elsteel)">Modular Switchboard (Elsteel Techno Module)</option>
+                  <option value="Outdoor Switchboards (Weatherproof)">Outdoor Weatherproof Enclosure (SS / Alum)</option>
+                  <option value="Meter Panels & CT Chambers (Energex/Ergon)">Meter Panel / CT Chamber (Energex / Ergon)</option>
+                  <option value="Custom Bespoke Switchgear">Custom Bespoke Switchgear / Tender Spec</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="rfqMessage" class="form-label">Project Details &amp; Specifications</label>
+                <textarea id="rfqMessage" class="form-textarea" placeholder="Detail switchboard ratings (amperes, fault level kA, Form of separation), site location, required delivery date..."></textarea>
+              </div>
+
+              <div class="form-feedback" id="formFeedback"></div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Submit Specification Request</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <div class="nesma-affiliate-tag">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e50914" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>Proud Accredited <strong>NESMA Member</strong> &bull; 100% Australian Owned</span>
+          </div>
+
+          <div>
+            &copy; <span id="currentYear"></span> <strong>SCRR Electrical (Pty) Ltd</strong>. ABN Registered. All Rights Reserved.
+          </div>
+
+          <div class="footer-legal-links">
+            <a href="#hero">Back to Top &uarr;</a>
+            <a href="mailto:admin@scrr.com.au">Legal</a>
+            <a href="mailto:engineering@scrr.com.au">Engineering</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       CLIENT-SIDE SCRIPTING & ELECTRICAL PARTICLES ENGINE
+       ========================================================================== -->
+  <script>
+    // 1. Current Year Auto Update
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // 2. Hero Video Autoplay Assurance (iOS / Mobile Battery Saver Fallback)
+    const heroVideo = document.getElementById('heroVideo');
+    if (heroVideo) {
+      heroVideo.muted = true;
+      const playPromise = heroVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          document.addEventListener('click', () => heroVideo.play(), { once: true });
+          document.addEventListener('touchstart', () => heroVideo.play(), { once: true });
+        });
+      }
+    }
+
+    // 3. Header Glass Scroll Effect
+    const siteHeader = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        siteHeader.classList.add('scrolled');
+      } else {
+        siteHeader.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // 4. Mobile Navigation Menu Toggle
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    function toggleMobileMenu(open) {
+      const isOpen = open !== undefined ? open : !mobileDrawer.classList.contains('open');
+      mobileDrawer.classList.toggle('open', isOpen);
+      mobileOverlay.classList.toggle('active', isOpen);
+      mobileNavToggle.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+
+    mobileNavToggle.addEventListener('click', () => toggleMobileMenu());
+    mobileOverlay.addEventListener('click', () => toggleMobileMenu(false));
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => toggleMobileMenu(false));
+    });
+
+    // 5. Active Nav Spy with Intersection Observer
+    const navSections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+          });
+        }
+      });
+    }, { rootMargin: '-30% 0px -50% 0px', threshold: 0 });
+
+    navSections.forEach(sec => sectionObserver.observe(sec));
+
+    // ==========================================================================
+    // 6. SUBTLE ELECTRICAL SPARKS & ENERGY TRAILS CANVAS ENGINE
+    // ==========================================================================
+    const canvas = document.getElementById('electricSparksCanvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }, { passive: true });
+
+    const particleCount = 42;
+    const particles = [];
+    let scrollSpeed = 0;
+    let lastScrollY = window.scrollY;
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.7,
+        vy: (Math.random() - 0.5) * 0.7,
+        size: Math.random() * 2.2 + 1,
+        color: Math.random() > 0.4 ? 'rgba(229, 9, 20, ' : 'rgba(255, 149, 0, ',
+        baseAlpha: Math.random() * 0.35 + 0.15,
+        energyPulse: 0
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      const delta = Math.abs(currentScrollY - lastScrollY);
+      scrollSpeed = Math.min(delta * 0.08, 3.5);
+      lastScrollY = currentScrollY;
+
+      particles.forEach(p => {
+        p.energyPulse = Math.min(p.energyPulse + scrollSpeed * 0.3, 1);
+      });
+    }, { passive: true });
+
+    function renderSparks() {
+      ctx.clearRect(0, 0, width, height);
+      scrollSpeed *= 0.94;
+
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        
+        p.x += p.vx * (1 + p.energyPulse * 2.5);
+        p.y += p.vy * (1 + p.energyPulse * 2.5);
+
+        if (p.x < 0) p.x = width;
+        if (p.x > width) p.x = 0;
+        if (p.y < 0) p.y = height;
+        if (p.y > height) p.y = 0;
+
+        p.energyPulse *= 0.96;
+
+        const currentAlpha = Math.min(1, p.baseAlpha + p.energyPulse * 0.55);
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * (1 + p.energyPulse * 0.5), 0, Math.PI * 2);
+        ctx.fillStyle = p.color + currentAlpha + ')';
+        ctx.shadowBlur = p.energyPulse > 0.1 ? 8 : 0;
+        ctx.shadowColor = 'rgba(229, 9, 20, 0.6)';
+        ctx.fill();
+        ctx.shadowBlur = 0;
+
+        for (let j = i + 1; j < particles.length; j++) {
+          const p2 = particles[j];
+          const dx = p.x - p2.x;
+          const dy = p.y - p2.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 110) {
+            const linkAlpha = (1 - dist / 110) * 0.12 * (1 + (p.energyPulse + p2.energyPulse) * 0.8);
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = `rgba(229, 9, 20, ${linkAlpha})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(renderSparks);
+    }
+    requestAnimationFrame(renderSparks);
+
+    // ==========================================================================
+    // 7. INTERACTIVE CLIENT JOB TRACKER LOGIC
+    // ==========================================================================
+    const mockJobsDatabase = {
+      'S2670': {
+        id: 'S2670',
+        projectName: 'Chevallum Industrial Park Phase 2 - Main Switchboard 1600A',
+        clientRef: 'Apex Electrical Contracting Pty Ltd',
+        phase: 4,
+        phaseName: 'AS/NZS 61439 QA & Dielectric Testing',
+        statusType: 'amber',
+        statusLabel: 'Factory Testing & QA Verification',
+        eta: 'Dispatched in 48 Hours (2 Business Days)',
+        completionRate: 80,
+        enclosure: 'Elsteel Techno Module Form 3b (IP54)',
+        rating: '1600A 50kA/1s 3-Phase 415V',
+        leadEngineer: 'Grant H., B.Eng (Elec)',
+        compliance: 'AS/NZS 61439.1 & 2 Type-Tested',
+        lastUpdated: 'Today at 08:45 AM AEST'
+      },
+      'S2540': {
+        id: 'S2540',
+        projectName: 'Regional Pumping Station Upgrade - 400A Weatherproof Control Assembly',
+        clientRef: 'Coastline Water & Civil Infrastructure',
+        phase: 5,
+        phaseName: 'FAT Certified & Dispatched / Ready for Delivery',
+        statusType: 'green',
+        statusLabel: 'Ready for Collection & Freight Staging',
+        eta: 'Ready for Immediate Dispatch',
+        completionRate: 100,
+        enclosure: '316 Marine Grade Stainless Steel (IP66)',
+        rating: '400A 25kA/1s Rainproof Enclosure',
+        leadEngineer: 'Marcus V., Senior Systems Engineer',
+        compliance: 'AS/NZS 61439.2 & IP66 Certified',
+        lastUpdated: 'Today at 11:20 AM AEST'
+      },
+      'S2710': {
+        id: 'S2710',
+        projectName: 'Maroochydore Commercial Complex - Energex 630A CT Metering Suite',
+        clientRef: 'Q-Elec Industrial Contractors',
+        phase: 2,
+        phaseName: 'CNC Laser Cutting & Metal Fabrication',
+        statusType: 'blue',
+        statusLabel: 'Active Enclosure Fabrication',
+        eta: '6 Business Days (Estimated Oct 24)',
+        completionRate: 40,
+        enclosure: '2.0mm Zincanneal Powder Coated Pebble Grey (IP54)',
+        rating: '630A CT Metering Chamber (QECM Spec)',
+        leadEngineer: 'Liam K., Switchgear Specialist',
+        compliance: 'Energex Approved & QECM Compliant',
+        lastUpdated: 'Yesterday at 04:15 PM AEST'
+      },
+      'S2895': {
+        id: 'S2895',
+        projectName: 'Kawana Health & Specialist Suites - Distribution Boards (x4 Units)',
+        clientRef: 'ProActive Power & Energy Solutions',
+        phase: 1,
+        phaseName: 'CAD Schematics & Engineering Approval',
+        statusType: 'blue',
+        statusLabel: 'Engineering Submittal Approved',
+        eta: '10 Business Days (Estimated Oct 28)',
+        completionRate: 20,
+        enclosure: 'Modular Distribution Chassis (IP54)',
+        rating: '250A Encapsulated Chassis (48-Pole)',
+        leadEngineer: 'Grant H., B.Eng (Elec)',
+        compliance: 'AS/NZS 61439 Compliant',
+        lastUpdated: '2 Days Ago'
+      }
+    };
+
+    const trackerSteps = [
+      { num: 1, title: 'CAD & Design' },
+      { num: 2, title: 'Metal Fab' },
+      { num: 3, title: 'Assembly & Loom' },
+      { num: 4, title: 'FAT & QA Test' },
+      { num: 5, title: 'Dispatch' }
+    ];
+
+    function renderJobTracker(job) {
+      const resultContainer = document.getElementById('trackerResult');
+      const emailBtn = document.getElementById('trackerEmailBtn');
+
+      const mailtoSubject = encodeURIComponent(`Inquiry regarding SCRR Job #${job.id}`);
+      const mailtoBody = encodeURIComponent(`Hi SCRR Production & Data Team,\n\nPlease provide an update on Job #${job.id} (${job.projectName}).\n\nThanks,\n`);
+      emailBtn.href = `mailto:data@scrr.com.au?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+      const statusClass = job.statusType === 'green' ? 'status-green-glow' 
+                        : job.statusType === 'amber' ? 'status-amber-glow' 
+                        : 'status-blue-glow';
+
+      const stepsHtml = trackerSteps.map((step) => {
+        let nodeClass = 'step-node';
+        let circleContent = step.num;
+        if (step.num < job.phase) {
+          nodeClass += ' completed';
+          circleContent = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>`;
+        } else if (step.num === job.phase) {
+          nodeClass += ' active';
+        }
+        return `
+          <div class="${nodeClass}">
+            <div class="step-circle">${circleContent}</div>
+            <div class="step-title">${step.title}</div>
+          </div>
+        `;
+      }).join('');
+
+      const progressPercent = Math.max(0, Math.min(100, ((job.phase - 1) / 4) * 100));
+
+      resultContainer.innerHTML = `
+        <div class="result-header-panel">
+          <div class="job-meta-main">
+            <div class="job-id-badge">
+              <span>JOB #${job.id}</span>
+              <span class="badge-tag">OFFICIAL FABRICATION ORDER</span>
+            </div>
+            <h3 class="job-project-name">${job.projectName}</h3>
+            <p class="job-client-ref">Contractor / Client: <strong>${job.clientRef}</strong></p>
+          </div>
+
+          <div class="job-status-pill-box">
+            <div class="status-badge-lg ${statusClass}">
+              <span class="pill-dot"></span>
+              <span>${job.statusLabel}</span>
+            </div>
+            <div class="eta-timestamp">
+              Confirmed ETA: <strong>${job.eta}</strong>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">
+              Status updated: ${job.lastUpdated}
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Stepper Component -->
+        <div class="progress-stepper">
+          <div class="progress-track-bg">
+            <div class="progress-track-fill" style="width: ${progressPercent}%; height: ${progressPercent}%;"></div>
+          </div>
+          ${stepsHtml}
+        </div>
+
+        <!-- Technical Specification Details Grid -->
+        <div class="tracker-details-grid">
+          <div class="tracker-detail-item">
+            <div class="detail-label">Current Phase</div>
+            <div class="detail-value" style="color: var(--brand-red);">${job.phaseName}</div>
+          </div>
+          <div class="tracker-detail-item">
+            <div class="detail-label">Enclosure &amp; Form Rating</div>
+            <div class="detail-value">${job.enclosure}</div>
+          </div>
+          <div class="tracker-detail-item">
+            <div class="detail-label">Busbar &amp; Electrical Capacity</div>
+            <div class="detail-value">${job.rating}</div>
+          </div>
+          <div class="tracker-detail-item">
+            <div class="detail-label">Compliance Verification</div>
+            <div class="detail-value" style="color: var(--status-green);">${job.compliance}</div>
+          </div>
+          <div class="tracker-detail-item">
+            <div class="detail-label">Lead Production Engineer</div>
+            <div class="detail-value">${job.leadEngineer}</div>
+          </div>
+          <div class="tracker-detail-item">
+            <div class="detail-label">Fabrication Milestone</div>
+            <div class="detail-value">${job.completionRate}% Verified Complete</div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Live MongoDB API Job Tracker Integration with Offline Fallback
+    async function handleJobSearch(event) {
+      if (event) event.preventDefault();
+      const input = document.getElementById('jobSearchInput');
+      const rawVal = input.value.trim().toUpperCase();
+      if (!rawVal) return;
+
+      const resultContainer = document.getElementById('trackerResult');
+      resultContainer.innerHTML = `
+        <div class="tracker-loading">
+          <div class="loading-spinner"></div>
+          <span>Querying Live Production Database for Job #${rawVal}...</span>
+        </div>
+      `;
+
+      try {
+        const response = await fetch(`/api/jobs/${encodeURIComponent(rawVal)}`);
+        const data = await response.json();
+
+        if (response.ok && data.found && data.job) {
+          renderJobTracker(data.job);
+        } else {
+          resultContainer.innerHTML = `
+            <div class="tracker-not-found">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              <p>Job ID <strong>${rawVal}</strong> was not found in the live production database.</p>
+              <p style="font-size:0.88rem;color:var(--text-muted);margin-top:6px">
+                Please verify your job identifier or reach out directly to 
+                <a href="mailto:data@scrr.com.au?subject=Inquiry%20regarding%20Job%20${encodeURIComponent(rawVal)}" style="color:var(--brand-red);font-weight:700">data@scrr.com.au</a>
+              </p>
+            </div>
+          `;
+        }
+      } catch (err) {
+        // Fallback to client mock data if backend server is unreachable
+        if (mockJobsDatabase[rawVal]) {
+          renderJobTracker(mockJobsDatabase[rawVal]);
+        } else {
+          resultContainer.innerHTML = `
+            <div class="tracker-not-found">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              <p>Job ID <strong>${rawVal}</strong> not found.</p>
+              <p style="font-size:0.88rem;color:var(--text-muted);margin-top:6px">
+                Production database connection offline. Please contact <a href="mailto:data@scrr.com.au" style="color:var(--brand-red);font-weight:700">data@scrr.com.au</a>
+              </p>
+            </div>
+          `;
+        }
+      }
+    }
+
+    function loadJobId(jobId) {
+      const input = document.getElementById('jobSearchInput');
+      input.value = jobId;
+      handleJobSearch();
+      document.getElementById('tracker').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Tracker with S2670 on page load
+    handleJobSearch();
+
+    // ==========================================================================
+    // 8. GALLERY LIGHTBOX MODAL
+    // ==========================================================================
+    const lightboxModal = document.getElementById('galleryLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCap = document.getElementById('lightboxCap');
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxCap.textContent = caption;
+      lightboxModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(event) {
+      if (event.target === lightboxModal) {
+        closeLightboxDirect();
+      }
+    }
+
+    function closeLightboxDirect() {
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (lightboxModal && lightboxModal.classList.contains('active')) {
+          closeLightboxDirect();
+        }
+        closeAdminModal();
+      }
+    });
+
+    // ==========================================================================
+    // 9. RFQ / QUOTE FORM HANDLER
+    // ==========================================================================
+    function prefillProduct(prodName) {
+      const select = document.getElementById('rfqProduct');
+      if (select) {
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === prodName || select.options[i].text.includes(prodName)) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    function handleQuoteSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('rfqName').value.trim();
+      const company = document.getElementById('rfqCompany').value.trim();
+      const email = document.getElementById('rfqEmail').value.trim();
+      const phone = document.getElementById('rfqPhone').value.trim();
+      const product = document.getElementById('rfqProduct').value;
+      const message = document.getElementById('rfqMessage').value.trim();
+      const feedback = document.getElementById('formFeedback');
+
+      feedback.className = 'form-feedback success';
+      feedback.innerHTML = `
+        <strong>Quotation Inquiry Received!</strong><br>
+        Thank you ${name}. Our engineering division (engineering@scrr.com.au) has recorded your inquiry for <em>${product}</em> and will follow up with technical documentation.
+      `;
+      feedback.style.display = 'block';
+
+      const subject = encodeURIComponent(`RFQ / Engineering Spec: ${product} - ${company}`);
+      const body = encodeURIComponent(`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone}\nProduct: ${product}\n\nProject Specifications:\n${message}\n`);
+      
+      setTimeout(() => {
+        const mailLink = `mailto:engineering@scrr.com.au?subject=${subject}&body=${body}`;
+        window.location.href = mailLink;
+      }, 1000);
+
+      document.getElementById('rfqForm').reset();
+    }
+
+    // ==========================================================================
+    // 10. SECRET ADMIN MODAL & MANAGEMENT PORTAL (CTRL + SHIFT + A)
+    // ==========================================================================
+    let adminToken = sessionStorage.getItem('scrr_admin_jwt') || null;
+
+    function openAdminModal() {
+      const modal = document.getElementById('adminModalBackdrop');
+      if (!modal) return;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+
+      if (adminToken) {
+        showDashboardView();
+        loadAdminJobs();
+      } else {
+        showLoginView();
+      }
+    }
+
+    function closeAdminModal() {
+      const modal = document.getElementById('adminModalBackdrop');
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    }
+
+    function showLoginView() {
+      document.getElementById('adminLoginView').style.display = 'block';
+      document.getElementById('adminDashboardView').style.display = 'none';
+      document.getElementById('adminLoginError').style.display = 'none';
+    }
+
+    function showDashboardView(user) {
+      const storedUser = user || JSON.parse(sessionStorage.getItem('scrr_admin_user') || '{}');
+      document.getElementById('adminLoginView').style.display = 'none';
+      document.getElementById('adminDashboardView').style.display = 'block';
+      document.getElementById('adminUserBadge').textContent = `Authenticated: ${storedUser.email || 'admin@scrr.com.au'}`;
+    }
+
+    async function handleAdminLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById('adminEmail').value.trim().toLowerCase();
+      const password = document.getElementById('adminPassword').value;
+      const errEl = document.getElementById('adminLoginError');
+      errEl.style.display = 'none';
+
+      if (!email.endsWith('@scrr.com.au')) {
+        errEl.textContent = 'Access restricted strictly to @scrr.com.au accounts.';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/admin/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+        const data = await res.json();
+
+        if (res.ok && data.token) {
+          adminToken = data.token;
+          sessionStorage.setItem('scrr_admin_jwt', data.token);
+          sessionStorage.setItem('scrr_admin_user', JSON.stringify(data.admin));
+          showDashboardView(data.admin);
+          loadAdminJobs();
+        } else {
+          errEl.textContent = data.message || 'Authentication failed. Check credentials.';
+          errEl.style.display = 'block';
+        }
+      } catch (err) {
+        errEl.textContent = 'Unable to reach authentication server. Ensure backend is running.';
+        errEl.style.display = 'block';
+      }
+    }
+
+    function logoutAdmin() {
+      adminToken = null;
+      sessionStorage.removeItem('scrr_admin_jwt');
+      sessionStorage.removeItem('scrr_admin_user');
+      showLoginView();
+      document.getElementById('adminEmail').value = '';
+      document.getElementById('adminPassword').value = '';
+    }
+
+    async function loadAdminJobs() {
+      const token = adminToken || sessionStorage.getItem('scrr_admin_jwt');
+      if (!token) return;
+
+      const tbody = document.getElementById('adminJobsTableBody');
+      tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:24px;color:var(--text-muted);">Syncing live MongoDB production records...</td></tr>`;
+
+      try {
+        const res = await fetch('/api/admin/jobs', {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        const data = await res.json();
+
+        if (res.ok && data.jobs) {
+          renderAdminTableRows(data.jobs);
+        } else {
+          tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:24px;color:var(--brand-red);">Failed to load jobs: ${data.message || 'Unauthorized'}</td></tr>`;
+        }
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:24px;color:var(--brand-red);">Server unreachable. Please verify server is running on port 5000.</td></tr>`;
+      }
+    }
+
+    function renderAdminTableRows(jobs) {
+      const tbody = document.getElementById('adminJobsTableBody');
+      if (!jobs || jobs.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:24px;color:var(--text-muted);">No jobs registered in database. Click "Seed Reference Jobs" above to populate sample records.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = jobs.map(j => `
+        <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+          <td style="padding:10px;font-family:var(--font-mono);font-weight:700;color:var(--brand-red);">${j.jobId}</td>
+          <td style="padding:10px;">
+            <div style="font-weight:600;max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${j.projectName}</div>
+            <div style="font-size:0.74rem;color:var(--text-muted);">${j.clientRef || 'On File'}</div>
+          </td>
+          <td style="padding:10px;">
+            <select id="phaseSelect_${j.jobId}" class="form-select" style="padding:4px 8px;font-size:0.78rem;">
+              <option value="1" ${j.phase === 1 ? 'selected' : ''}>1: CAD & Design (20%)</option>
+              <option value="2" ${j.phase === 2 ? 'selected' : ''}>2: Metal Fab (40%)</option>
+              <option value="3" ${j.phase === 3 ? 'selected' : ''}>3: Wiring/Loom (60%)</option>
+              <option value="4" ${j.phase === 4 ? 'selected' : ''}>4: FAT & QA Test (80%)</option>
+              <option value="5" ${j.phase === 5 ? 'selected' : ''}>5: Dispatched (100%)</option>
+            </select>
+          </td>
+          <td style="padding:10px;">
+            <input type="text" id="etaInput_${j.jobId}" value="${j.eta || ''}" class="form-input" style="padding:4px 8px;font-size:0.78rem;width:130px;">
+          </td>
+          <td style="padding:10px;white-space:nowrap;">
+            <button onclick="quickUpdateJob('${j.jobId}')" class="btn btn-sm btn-primary" style="padding:4px 10px;font-size:0.75rem;margin-right:6px;">Update</button>
+            <button onclick="deleteJobRecord('${j.jobId}')" class="btn btn-sm btn-glass-pill" style="padding:4px 8px;font-size:0.75rem;color:var(--brand-red);">Delete</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    async function quickUpdateJob(jobId) {
+      const token = adminToken || sessionStorage.getItem('scrr_admin_jwt');
+      const phaseVal = parseInt(document.getElementById(`phaseSelect_${jobId}`).value);
+      const etaVal = document.getElementById(`etaInput_${jobId}`).value.trim();
+
+      try {
+        const res = await fetch('/api/admin/jobs/upsert', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+          },
+          body: JSON.stringify({
+            jobId,
+            phase: phaseVal,
+            eta: etaVal,
+            completionRate: phaseVal * 20
+          })
+        });
+
+        const data = await res.json();
+        if (res.ok && data.status === 'success') {
+          showAdminNotice(`✓ Job #${jobId} updated to Phase ${phaseVal}`, 'green');
+        } else {
+          showAdminNotice(`Error updating job: ${data.message}`, 'red');
+        }
+      } catch (err) {
+        showAdminNotice('Server error during update', 'red');
+      }
+    }
+
+    async function handleAdminUpsertSingle(event) {
+      event.preventDefault();
+      const token = adminToken || sessionStorage.getItem('scrr_admin_jwt');
+      const jobId = document.getElementById('newJobId').value.trim().toUpperCase();
+      const projectName = document.getElementById('newProjectName').value.trim();
+      const clientRef = document.getElementById('newClientRef').value.trim();
+      const phase = parseInt(document.getElementById('newJobPhase').value);
+      const eta = document.getElementById('newJobEta').value.trim();
+      const statusType = document.getElementById('newJobStatusType').value;
+
+      try {
+        const res = await fetch('/api/admin/jobs/upsert', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+          },
+          body: JSON.stringify({
+            jobId,
+            projectName,
+            clientRef: clientRef || 'On File',
+            phase,
+            statusType,
+            eta: eta || 'Confirmed via engineering spec',
+            completionRate: phase * 20
+          })
+        });
+
+        const data = await res.json();
+        if (res.ok && data.status === 'success') {
+          showAdminNotice(`✓ Added/Updated Job #${jobId}`, 'green');
+          document.getElementById('newJobId').value = '';
+          document.getElementById('newProjectName').value = '';
+          document.getElementById('newClientRef').value = '';
+          document.getElementById('newJobEta').value = '';
+          loadAdminJobs();
+        } else {
+          showAdminNotice(`Error: ${data.message}`, 'red');
+        }
+      } catch (err) {
+        showAdminNotice('Network error', 'red');
+      }
+    }
+
+    async function uploadCsvFile() {
+      const token = adminToken || sessionStorage.getItem('scrr_admin_jwt');
+      const fileInput = document.getElementById('csvFileInput');
+      const feedback = document.getElementById('csvUploadFeedback');
+
+      if (!fileInput.files || fileInput.files.length === 0) {
+        feedback.textContent = 'Please choose a .csv file first.';
+        feedback.style.color = 'var(--brand-red)';
+        feedback.style.display = 'block';
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('csvFile', fileInput.files[0]);
+
+      feedback.textContent = 'Processing CSV upload...';
+      feedback.style.color = 'var(--status-blue)';
+      feedback.style.display = 'block';
+
+      try {
+        const res = await fetch('/api/admin/jobs/upload-csv', {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${token}` },
+          body: formData
+        });
+
+        const data = await res.json();
+        if (res.ok && data.status === 'success') {
+          feedback.textContent = `✓ ${data.message} (${data.processed} jobs updated)`;
+          feedback.style.color = 'var(--status-green)';
+          fileInput.value = '';
+          loadAdminJobs();
+        } else {
+          feedback.textContent = `Upload failed: ${data.message}`;
+          feedback.style.color = 'var(--brand-red)';
+        }
+      } catch (err) {
+        feedback.textContent = 'Network error during CSV upload';
+        feedback.style.color = 'var(--brand-red)';
+      }
+    }
+
+    async function deleteJobRecord(jobId) {
+      if (!confirm(`Are you sure you want to delete Job #${jobId} from MongoDB?`)) return;
+      const token = adminToken || sessionStorage.getItem('scrr_admin_jwt');
+
+      try {
+        const res = await fetch(`/api/admin/jobs/${encodeURIComponent(jobId)}`, {
+          method: 'DELETE',
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        const data = await res.json();
+        if (res.ok) {
+          showAdminNotice(`✓ Deleted Job #${jobId}`, 'green');
+          loadAdminJobs();
+        } else {
+          showAdminNotice(`Delete failed: ${data.message}`, 'red');
+        }
+      } catch (err) {
+        showAdminNotice('Network error during deletion', 'red');
+      }
+    }
+
+    async function seedDatabaseFromAdmin() {
+      const token = adminToken || sessionStorage.getItem('scrr_admin_jwt');
+      try {
+        const res = await fetch('/api/admin/seed', {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        const data = await res.json();
+        if (res.ok) {
+          showAdminNotice('✓ Reference jobs seeded in MongoDB successfully!', 'green');
+          loadAdminJobs();
+        } else {
+          showAdminNotice(`Seeding failed: ${data.message}`, 'red');
+        }
+      } catch (err) {
+        showAdminNotice('Network error', 'red');
+      }
+    }
+
+    function showAdminNotice(msg, color) {
+      const el = document.getElementById('adminNotification');
+      if (!el) return;
+      el.textContent = msg;
+      el.style.color = color === 'green' ? 'var(--status-green)' : 'var(--brand-red)';
+      el.style.display = 'block';
+      setTimeout(() => { el.style.display = 'none'; }, 4000);
+    }
+
+    // Shortcut Trigger: Ctrl + Shift + A
+    document.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        openAdminModal();
+      }
+    });
+  </script>
+
+  <!-- ==========================================================================
+       SECRET ADMIN MODAL & MANAGEMENT PORTAL (CTRL + SHIFT + A)
+       ========================================================================== -->
+  <div class="admin-modal-backdrop" id="adminModalBackdrop" style="display: none;" onclick="if(event.target===this)closeAdminModal()">
+    <div class="admin-modal-card">
+      <div class="admin-modal-header">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div class="admin-icon-badge">⚡</div>
+          <div>
+            <h3>SCRR Production Control Portal</h3>
+            <p id="adminUserBadge" style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600;">
+              Restricted Internal Operations
+            </p>
+          </div>
+        </div>
+        <button class="lightbox-close-btn" style="position:static;" onclick="closeAdminModal()" aria-label="Close admin modal">
+          ✕
+        </button>
+      </div>
+
+      <!-- 1. Login View -->
+      <div id="adminLoginView">
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;">
+          Access restricted strictly to authorized <strong style="color: var(--brand-red);">@scrr.com.au</strong> engineering and operations staff.
+        </p>
+        <form onsubmit="handleAdminLogin(event)" style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label">Authorized SCRR Email</label>
+            <input type="email" id="adminEmail" class="form-input" placeholder="admin@scrr.com.au" required autocomplete="username">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Secure Access Key / Password</label>
+            <input type="password" id="adminPassword" class="form-input" placeholder="••••••••••••" required autocomplete="current-password">
+          </div>
+          <div id="adminLoginError" style="color: var(--brand-red); font-size: 0.85rem; font-weight: 600; display: none; padding: 10px; background: rgba(229,9,20,0.06); border-radius: var(--radius-xs);"></div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <span>Authenticate Secure Session</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 8px;">
+            Protected by bcrypt password hashing &amp; signed JWT session tokens.
+          </p>
+        </form>
+      </div>
+
+      <!-- 2. Dashboard View -->
+      <div id="adminDashboardView" style="display: none;">
+        <!-- Action Toolbar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; gap: 8px;">
+            <button onclick="loadAdminJobs()" class="btn btn-sm btn-glass-pill">↻ Refresh Records</button>
+            <button onclick="seedDatabaseFromAdmin()" class="btn btn-sm btn-glass-pill">⚡ Seed Reference Jobs</button>
+          </div>
+          <button onclick="logoutAdmin()" class="btn btn-sm btn-primary" style="background: rgba(229,9,20,0.1); color: var(--brand-red); border: 1px solid var(--brand-red); box-shadow: none;">Log Out</button>
+        </div>
+
+        <div id="adminNotification" style="display: none; padding: 10px 14px; border-radius: var(--radius-xs); font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; background: rgba(0,0,0,0.03);"></div>
+
+        <!-- Bulk CSV Upload Box -->
+        <div style="background: rgba(229,9,20,0.03); border: 1px dashed rgba(229,9,20,0.3); border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px;">
+          <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">📤 Bulk Import Production Schedule via CSV</h4>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px;">
+            Upload CSV with columns: <code>jobId, projectName, clientRef, phase (1-5), eta, rating, enclosure</code>
+          </p>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <input type="file" id="csvFileInput" accept=".csv" style="font-size: 0.82rem; flex: 1;">
+            <button onclick="uploadCsvFile()" class="btn btn-sm btn-primary">Process &amp; Sync MongoDB</button>
+          </div>
+          <div id="csvUploadFeedback" style="font-size: 0.82rem; font-weight: 700; margin-top: 8px; display: none;"></div>
+        </div>
+
+        <!-- Single Job Upsert Section -->
+        <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px;">
+          <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px;">✏️ Add / Update Production Job</h4>
+          <form onsubmit="handleAdminUpsertSingle(event)">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 12px;">
+              <input type="text" id="newJobId" class="form-input" placeholder="Job ID (e.g. S2950)" required style="font-size: 0.82rem; padding: 8px 12px;">
+              <input type="text" id="newProjectName" class="form-input" placeholder="Project Description" required style="font-size: 0.82rem; padding: 8px 12px;">
+              <input type="text" id="newClientRef" class="form-input" placeholder="Client / Contractor" style="font-size: 0.82rem; padding: 8px 12px;">
+              <select id="newJobPhase" class="form-select" style="font-size: 0.82rem; padding: 8px 12px;">
+                <option value="1">Phase 1: CAD &amp; Design (20%)</option>
+                <option value="2">Phase 2: Metal Fabrication (40%)</option>
+                <option value="3">Phase 3: Assembly &amp; Looming (60%)</option>
+                <option value="4">Phase 4: FAT &amp; QA Test (80%)</option>
+                <option value="5">Phase 5: Ready / Dispatched (100%)</option>
+              </select>
+              <select id="newJobStatusType" class="form-select" style="font-size: 0.82rem; padding: 8px 12px;">
+                <option value="blue">🔵 In Production</option>
+                <option value="amber">🟡 Testing / QA</option>
+                <option value="green">🟢 Dispatched / Ready</option>
+              </select>
+              <input type="text" id="newJobEta" class="form-input" placeholder="Confirmed ETA" style="font-size: 0.82rem; padding: 8px 12px;">
+            </div>
+            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;">Save Job to MongoDB</button>
+          </form>
+        </div>
+
+        <!-- Live Editable Table -->
+        <div style="margin-bottom: 12px;">
+          <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 10px;">📋 Live Production Orders in Database</h4>
+          <div class="admin-table-container" style="max-height: 380px; overflow-y: auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Job ID</th>
+                  <th>Project / Client</th>
+                  <th>Phase Milestone</th>
+                  <th>Dispatch ETA</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminJobsTableBody">
+                <!-- Dynamically populated via MongoDB -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
